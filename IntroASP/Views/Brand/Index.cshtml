@@ -1,0 +1,37 @@
+﻿@model List<Brand>
+
+
+<h1>Marcas</h1>
+
+    <p>
+        <a class="btn btn-success" asp-action="Create">
+            Crear
+        </a>
+    </p>
+
+<table class="table">
+    <thead class="thead-dark">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Marca
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var brand in Model)
+        {
+            
+            <tr>
+                <td>
+                    @Html.DisplayFor(m=>brand.BrandId)
+                </td>
+                <td>
+                    @Html.DisplayFor(m=>brand.BrandId)
+                </td>
+            </tr> 
+        }
+        </tbody>
+    </table>
